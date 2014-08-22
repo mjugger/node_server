@@ -1,0 +1,11 @@
+{
+  "name": "web_server",
+  "version": "0.1.0",
+  "description": "learning nodejs web server (HTTP module)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mukhtar Jugger",
+  "license": "ISC"
+}
