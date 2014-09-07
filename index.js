@@ -3,7 +3,7 @@ var http = require('http'),
 
 http.createServer(function(req,res){
 	res.writeHead(200,{'content-type':'text/html'});
-	res.end('<!DOCTYPE html><html><body><p>Hi!<br/>My name is '+os.hostname()+'. I am your computer.</p></body></html>');
+	res.end('<!DOCTYPE html><html><body><p>HiMukhtar!<br/>My name is '+os.hostname()+'. I am your computer.</p></body></html>');
 	console.log(req.url);
 }).listen(3000,'localhost');
 
