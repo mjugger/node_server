@@ -7,4 +7,4 @@ http.createServer(function(req,res){
 	console.log(req.url);
 }).listen(3000,'localhost');
 
-console.log('server is running');
+console.log('server is running now!');
