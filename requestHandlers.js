@@ -1,3 +1,4 @@
+var dbTestInfoView = require('./views/dbTestInfo').dbTestInfo;
 function root(response){
 	console.log('root path requsted.');
 	response.writeHead(200,{'content-type':'text/html'});
@@ -8,7 +9,7 @@ function root(response){
 function dbTestInfo(response){
 	console.log('dbTestInfo path requsted.');
 	response.writeHead(200,{'content-type':'text/html'});
-	response.write('this is the dbTestInfo route.');
+	response.write(dbTestInfoView);
 	response.end();
 }
 
