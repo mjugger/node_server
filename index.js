@@ -1,10 +1,10 @@
-var http = require('http'),
-	os = require('os');
+var server = require('./server'),
+	router = require('./router'),
+	requestHandlers = require('./requestHandlers'),
+	handle = {};
 
-http.createServer(function(req,res){
-	res.writeHead(200,{'content-type':'text/html'});
-	res.end('<!DOCTYPE html><html><body><p>HiMukhtar!<br/>My name is '+os.hostname()+'. I am your computer.</p></body></html>');
-	console.log(req.url);
-}).listen(3000,'localhost');
+handle['/'] = requestHandlers.root;
+handle['/dbTestInfo'] = requestHandlers.dbTestInfo;
+handle['/hiThere'] = requestHandlers.hiThere;
 
-console.log('server is running now!');
+server.start(router.route,handle);
